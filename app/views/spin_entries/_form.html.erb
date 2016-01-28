@@ -1,0 +1,49 @@
+<%= form_for(@spin_entry) do |f| %>
+  <% if @spin_entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spin_entry.errors.count, "error") %> prohibited this spin_entry from being saved:</h2>
+
+      <ul>
+      <% @spin_entry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.time_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :distance %><br>
+    <%= f.text_field :distance %>
+  </div>
+  <div class="field">
+    <%= f.label :speed %><br>
+    <%= f.text_field :speed %>
+  </div>
+  <div class="field">
+    <%= f.label :power %><br>
+    <%= f.text_field :power %>
+  </div>
+  <div class="field">
+    <%= f.label :hrate %><br>
+    <%= f.number_field :hrate %>
+  </div>
+  <div class="field">
+    <%= f.label :rpm %><br>
+    <%= f.number_field :rpm %>
+  </div>
+  <div class="field">
+    <%= f.label :spin_date %><br>
+    <%= f.date_select :spin_date %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

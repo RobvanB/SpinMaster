@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2016-01-27 08:06:37
+  distance: 9.99
+  speed: 9.99
+  power: 9.99
+  hrate: 1
+  rpm: 1
+  spin_date: 2016-01-27
+  user_id: 1
+
+two:
+  time: 2016-01-27 08:06:37
+  distance: 9.99
+  speed: 9.99
+  power: 9.99
+  hrate: 1
+  rpm: 1
+  spin_date: 2016-01-27
+  user_id: 1

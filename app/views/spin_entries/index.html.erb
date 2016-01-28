@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Spin Entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Distance</th>
+      <th>Speed</th>
+      <th>Power</th>
+      <th>Hrate</th>
+      <th>Rpm</th>
+      <th>Spin date</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spin_entries.each do |spin_entry| %>
+      <tr>
+        <td><%= spin_entry.time %></td>
+        <td><%= spin_entry.distance %></td>
+        <td><%= spin_entry.speed %></td>
+        <td><%= spin_entry.power %></td>
+        <td><%= spin_entry.hrate %></td>
+        <td><%= spin_entry.rpm %></td>
+        <td><%= spin_entry.spin_date %></td>
+        <td><%= spin_entry.user_id %></td>
+        <td><%= link_to 'Show', spin_entry %></td>
+        <td><%= link_to 'Edit', edit_spin_entry_path(spin_entry) %></td>
+        <td><%= link_to 'Destroy', spin_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spin entry', new_spin_entry_path %>

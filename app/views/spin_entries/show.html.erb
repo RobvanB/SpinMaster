@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @spin_entry.time %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @spin_entry.distance %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @spin_entry.speed %>
+</p>
+
+<p>
+  <strong>Power:</strong>
+  <%= @spin_entry.power %>
+</p>
+
+<p>
+  <strong>Hrate:</strong>
+  <%= @spin_entry.hrate %>
+</p>
+
+<p>
+  <strong>Rpm:</strong>
+  <%= @spin_entry.rpm %>
+</p>
+
+<p>
+  <strong>Spin date:</strong>
+  <%= @spin_entry.spin_date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @spin_entry.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_spin_entry_path(@spin_entry) %> |
+<%= link_to 'Back', spin_entries_path %>

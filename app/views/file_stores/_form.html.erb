@@ -1,0 +1,33 @@
+<%= form_for(@file_store) do |f| %>
+  <% if @file_store.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@file_store.errors.count, "error") %> prohibited this file_store from being saved:</h2>
+
+      <ul>
+      <% @file_store.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :file_name %><br>
+    <%= f.text_field :file_name %>
+  </div>
+  <div class="field">
+    <%= f.label :date_loaded %><br>
+    <%= f.date_select :date_loaded %>
+  </div>
+  <div class="field">
+    <%= f.label :date_exercised %><br>
+    <%= f.date_select :date_exercised %>
+  </div>
+  <div class="field">
+    <%= f.label :attachment %><br>
+    <%= f.file_field :attachment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
