@@ -11,18 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160128000537) do
+ActiveRecord::Schema.define(version: 20160128234058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "file_stores", force: :cascade do |t|
-    t.string   "file_name"
+    t.string   "description"
     t.date     "date_loaded"
     t.date     "date_exercised"
     t.string   "attachment"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.boolean  "processed"
+    t.integer  "user_id"
   end
 
   create_table "spin_entries", force: :cascade do |t|

@@ -69,6 +69,6 @@ class FileStoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def file_store_params
-      params.require(:file_store).permit(:file_name, :date_loaded, :date_exercised, :attachment)
+      params.require(:file_store).permit(:description, :date_loaded, :date_exercised, :attachment)
     end
 end
