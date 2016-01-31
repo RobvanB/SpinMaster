@@ -1,16 +1,5 @@
+<%= render 'layouts/alerts' %>
 <%= form_for(@file_store) do |f| %>
-  <% if @file_store.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@file_store.errors.count, "error") %> prohibited this file_store from being saved:</h2>
-
-      <ul>
-      <% @file_store.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>

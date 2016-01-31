@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   resources :file_stores
   resources :spin_entries
   root "static_pages#home"
+  #resources :process_files
+  get 'process_files', to: 'process_files#index'
+  post 'process_files/start_process', to: 'process_files#start_process'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -31,6 +31,7 @@ class FileStoresController < ApplicationController
         format.html { redirect_to @file_store, notice: 'File store was successfully created.' }
         format.json { render :show, status: :created, location: @file_store }
       else
+        @errors = @file_store.errors
         format.html { render :new }
         format.json { render json: @file_store.errors, status: :unprocessable_entity }
       end
@@ -45,6 +46,8 @@ class FileStoresController < ApplicationController
         format.html { redirect_to @file_store, notice: 'File store was successfully updated.' }
         format.json { render :show, status: :ok, location: @file_store }
       else
+        @errors = @file_store.errors
+        byebug
         format.html { render :edit }
         format.json { render json: @file_store.errors, status: :unprocessable_entity }
       end

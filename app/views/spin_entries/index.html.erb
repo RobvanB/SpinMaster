@@ -1,8 +1,8 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" ><%= notice %></p>
 
 <h1>Listing Spin Entries</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Time</th>
@@ -28,6 +28,7 @@
         <td><%= spin_entry.rpm %></td>
         <td><%= spin_entry.spin_date %></td>
         <td><%= spin_entry.user_id %></td>
+        <td><%= spin_entry.show %></td>
         <td><%= link_to 'Show', spin_entry %></td>
         <td><%= link_to 'Edit', edit_spin_entry_path(spin_entry) %></td>
         <td><%= link_to 'Destroy', spin_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>

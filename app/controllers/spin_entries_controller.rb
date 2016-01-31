@@ -31,6 +31,7 @@ class SpinEntriesController < ApplicationController
         format.html { redirect_to @spin_entry, notice: 'Spin entry was successfully created.' }
         format.json { render :show, status: :created, location: @spin_entry }
       else
+        @errors = @spin_entry.errors
         format.html { render :new }
         format.json { render json: @spin_entry.errors, status: :unprocessable_entity }
       end
@@ -45,6 +46,7 @@ class SpinEntriesController < ApplicationController
         format.html { redirect_to @spin_entry, notice: 'Spin entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @spin_entry }
       else
+        @errors = @spin_entry.errors
         format.html { render :edit }
         format.json { render json: @spin_entry.errors, status: :unprocessable_entity }
       end
