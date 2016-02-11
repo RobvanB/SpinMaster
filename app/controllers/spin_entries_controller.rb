@@ -4,7 +4,7 @@ class SpinEntriesController < ApplicationController
   # GET /spin_entries
   # GET /spin_entries.json
   def index
-    @spin_entries = SpinEntry.all
+    @spin_entries = SpinEntry.paginate(page: params[:page])
   end
 
   # GET /spin_entries/1

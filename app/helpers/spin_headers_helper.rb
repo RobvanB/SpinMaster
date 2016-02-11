@@ -1,0 +1,2 @@
+module SpinHeadersHelper
+end

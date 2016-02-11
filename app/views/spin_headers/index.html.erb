@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Spin Headers</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Spinheader</th>
+      <th>File store</th>
+      <th>Notes</th>
+      <th>Stage</th>
+      <th>Time recorded</th>
+      <th>Distance recorded</th>
+      <th>Avg speed recorded</th>
+      <th>Avg watts recorded</th>
+      <th>Avg hr recorded</th>
+      <th>Avg rpm recorded</th>
+      <th>Max speed recorded</th>
+      <th>Max watts recorded</th>
+      <th>Max hr recorded</th>
+      <th>Max rpm recorded</th>
+      <th>Kcal recorded</th>
+      <th>Kj recorded</th>
+      <th>Distance calc</th>
+      <th>Avg speed calc</th>
+      <th>Avg watts calc</th>
+      <th>Avg hr calc</th>
+      <th>Avg rpm calc</th>
+      <th>Max speed calc</th>
+      <th>Max watts calc</th>
+      <th>Max hr calc</th>
+      <th>Max rpm calc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spin_headers.each do |spin_header| %>
+      <tr>
+        <td><%= spin_header.SpinHeader %></td>
+        <td><%= spin_header.file_store_id %></td>
+        <td><%= spin_header.notes %></td>
+        <td><%= spin_header.stage %></td>
+        <td><%= spin_header.time_recorded %></td>
+        <td><%= spin_header.distance_recorded %></td>
+        <td><%= spin_header.avg_speed_recorded %></td>
+        <td><%= spin_header.avg_watts_recorded %></td>
+        <td><%= spin_header.avg_hr_recorded %></td>
+        <td><%= spin_header.avg_rpm_recorded %></td>
+        <td><%= spin_header.max_speed_recorded %></td>
+        <td><%= spin_header.max_watts_recorded %></td>
+        <td><%= spin_header.max_hr_recorded %></td>
+        <td><%= spin_header.max_rpm_recorded %></td>
+        <td><%= spin_header.kcal_recorded %></td>
+        <td><%= spin_header.kj_recorded %></td>
+        <td><%= spin_header.distance_calc %></td>
+        <td><%= spin_header.avg_speed_calc %></td>
+        <td><%= spin_header.avg_watts_calc %></td>
+        <td><%= spin_header.avg_hr_calc %></td>
+        <td><%= spin_header.avg_rpm_calc %></td>
+        <td><%= spin_header.max_speed_calc %></td>
+        <td><%= spin_header.max_watts_calc %></td>
+        <td><%= spin_header.max_hr_calc %></td>
+        <td><%= spin_header.max_rpm_calc %></td>
+        <td><%= link_to 'Show', spin_header %></td>
+        <td><%= link_to 'Edit', edit_spin_header_path(spin_header) %></td>
+        <td><%= link_to 'Destroy', spin_header, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spin header', new_spin_header_path %>

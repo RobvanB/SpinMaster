@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :spin_headers
   resources :file_stores
   resources :spin_entries
   root "static_pages#home"

@@ -2,10 +2,13 @@
 
 <h1>Listing Spin Entries</h1>
 
+<%= will_paginate %>
+
 <table class="table">
   <thead>
     <tr>
-      <th>Time</th>
+      <th>Time Recorded</th>
+      <th>Seconds elapsed</th>
       <th>Distance</th>
       <th>Speed</th>
       <th>Power</th>
@@ -20,7 +23,8 @@
   <tbody>
     <% @spin_entries.each do |spin_entry| %>
       <tr>
-        <td><%= spin_entry.time %></td>
+        <td><%= spin_entry.time_recorded %></td>
+        <td><%= spin_entry.seconds_elapsed %></td>
         <td><%= spin_entry.distance %></td>
         <td><%= spin_entry.speed %></td>
         <td><%= spin_entry.power %></td>
@@ -36,7 +40,7 @@
     <% end %>
   </tbody>
 </table>
-
+<%= will_paginate %>
 <br>
 
 <%= link_to 'New Spin entry', new_spin_entry_path %>

@@ -9,6 +9,7 @@
       <th>Date loaded</th>
       <th>Date exercised</th>
       <th>Attachment</th>
+      <td>processed</td>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= file_store.date_loaded %></td>
         <td><%= file_store.date_exercised %></td>
         <td><%= file_store.attachment %></td>
+        <td><%= file_store.processed %></td>
         <td><%= link_to 'Show', file_store %></td>
         <td><%= link_to 'Edit', edit_file_store_path(file_store) %></td>
         <td><%= link_to 'Destroy', file_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,10 +1,7 @@
 <%# app/views/process_files/indec.html.erb %>
-
-<p id="notice" class="info"><%= notice %></p>
 <%= render 'layouts/alerts' %>
 
 <h1>Process files</h1>
 <div>
-  Something: <%= @something %>
-  <%= button_to 'Process Files', :action => 'start_process', :remote => true %>
+  <%= button_to 'Process Files', { :action => 'start_process' }, data: { confirm: "Are you sure to process all unprocessed files ?" } %>
 </div>

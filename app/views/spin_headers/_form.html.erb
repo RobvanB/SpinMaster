@@ -1,0 +1,117 @@
+<%= form_for(@spin_header) do |f| %>
+  <% if @spin_header.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spin_header.errors.count, "error") %> prohibited this spin_header from being saved:</h2>
+
+      <ul>
+      <% @spin_header.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :SpinHeader %><br>
+    <%= f.text_field :SpinHeader %>
+  </div>
+  <div class="field">
+    <%= f.label :file_store_id %><br>
+    <%= f.number_field :file_store_id %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :stage %><br>
+    <%= f.text_field :stage %>
+  </div>
+  <div class="field">
+    <%= f.label :time_recorded %><br>
+    <%= f.time_select :time_recorded %>
+  </div>
+  <div class="field">
+    <%= f.label :distance_recorded %><br>
+    <%= f.text_field :distance_recorded %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_speed_recorded %><br>
+    <%= f.text_field :avg_speed_recorded %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_watts_recorded %><br>
+    <%= f.number_field :avg_watts_recorded %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_hr_recorded %><br>
+    <%= f.number_field :avg_hr_recorded %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_rpm_recorded %><br>
+    <%= f.number_field :avg_rpm_recorded %>
+  </div>
+  <div class="field">
+    <%= f.label :max_speed_recorded %><br>
+    <%= f.text_field :max_speed_recorded %>
+  </div>
+  <div class="field">
+    <%= f.label :max_watts_recorded %><br>
+    <%= f.number_field :max_watts_recorded %>
+  </div>
+  <div class="field">
+    <%= f.label :max_hr_recorded %><br>
+    <%= f.number_field :max_hr_recorded %>
+  </div>
+  <div class="field">
+    <%= f.label :max_rpm_recorded %><br>
+    <%= f.number_field :max_rpm_recorded %>
+  </div>
+  <div class="field">
+    <%= f.label :kcal_recorded %><br>
+    <%= f.number_field :kcal_recorded %>
+  </div>
+  <div class="field">
+    <%= f.label :kj_recorded %><br>
+    <%= f.number_field :kj_recorded %>
+  </div>
+  <div class="field">
+    <%= f.label :distance_calc %><br>
+    <%= f.text_field :distance_calc %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_speed_calc %><br>
+    <%= f.text_field :avg_speed_calc %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_watts_calc %><br>
+    <%= f.number_field :avg_watts_calc %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_hr_calc %><br>
+    <%= f.number_field :avg_hr_calc %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_rpm_calc %><br>
+    <%= f.number_field :avg_rpm_calc %>
+  </div>
+  <div class="field">
+    <%= f.label :max_speed_calc %><br>
+    <%= f.text_field :max_speed_calc %>
+  </div>
+  <div class="field">
+    <%= f.label :max_watts_calc %><br>
+    <%= f.number_field :max_watts_calc %>
+  </div>
+  <div class="field">
+    <%= f.label :max_hr_calc %><br>
+    <%= f.number_field :max_hr_calc %>
+  </div>
+  <div class="field">
+    <%= f.label :max_rpm_calc %><br>
+    <%= f.number_field :max_rpm_calc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
